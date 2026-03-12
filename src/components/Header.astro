@@ -7,11 +7,12 @@ import HeaderLink from './HeaderLink.astro';
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href="/">Inicio</HeaderLink>
+			<HeaderLink href="/about">Proyectos</HeaderLink>
+			<HeaderLink href="/blog">Sobre mi</HeaderLink>
+			<HeaderLink href="/about">Curriculum</HeaderLink>
 		</div>
-		<div class="social-links">
+		<!-- <div class="social-links">
 			<a href="https://m.webtoo.ls/@astro" target="_blank">
 				<span class="sr-only">Follow Astro on Mastodon</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
@@ -39,7 +40,7 @@ import HeaderLink from './HeaderLink.astro';
 					></path></svg
 				>
 			</a>
-		</div>
+		</div> -->
 	</nav>
 </header>
 <style>
@@ -64,7 +65,7 @@ import HeaderLink from './HeaderLink.astro';
 		justify-content: space-between;
 	}
 	nav a {
-		padding: 1em 0.5em;
+		padding: 1.5em 0.5em;
 		color: var(--black);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
@@ -72,6 +73,13 @@ import HeaderLink from './HeaderLink.astro';
 	nav a.active {
 		text-decoration: none;
 		border-bottom-color: var(--accent);
+	}
+	.internal-links{
+		display: grid;
+        grid-template-columns: repeat(4,1fr);
+	}
+	.internal-links a{
+	    text-align: center;
 	}
 	.social-links,
 	.social-links a {
